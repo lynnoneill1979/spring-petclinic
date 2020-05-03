@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  spring-petclinic:
+    image: spring-petclinic
+    build: .
+    ports:
+      - 3000
