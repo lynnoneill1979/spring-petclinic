@@ -8,7 +8,7 @@ RUN ["mvn", "package", "-DskipTests=true"]
 
 FROM java:8-jre
 
-COPY --from=0 /code/target/spring-petclinic-2.0.0.BUILD-SNAPSHOT.jar /
+COPY --from=0 /code/target/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar /
 
 # expose http and debug ports
 EXPOSE 8080 8000
