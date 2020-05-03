@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "petclinickubcluster"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "petclinickubcluster"
+    spec:
+      containers:
+        - name: "petclinickubcluster"
+          image: "petclinicproject.azurecr.io/petclinickubcluster"
+          ports:
+          - containerPort: 3000
